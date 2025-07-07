@@ -1,0 +1,80 @@
+# Testing Local LLM Performance with Ollama: Prompt and Document Suggestions
+
+I'd be happy to suggest prompts, documents, and URLs that would provide good test cases for evaluating your local Ollama models across different hardware setups.
+
+## Suggested Prompts (By Category)
+
+### Knowledge-Based Prompts
+1. "Explain the key differences between transformer and RNN architectures in deep learning."
+2. "Summarize the major climate agreements from 1992 to present day."
+3. "What are the primary challenges in quantum computing, and how might they be overcome?"
+4. "Compare and contrast different approaches to federated learning."
+5. "Explain how CRISPR gene editing works and its ethical implications."
+
+### Reasoning and Analysis Prompts
+1. "Analyze the potential economic impacts of widespread AI adoption in the next decade."
+2. "Consider the philosophical problem of the trolley dilemma. What are the key ethical frameworks that can be applied?"
+3. "What are the tradeoffs between privacy and security in modern digital systems?"
+4. "Evaluate the arguments for and against universal basic income."
+5. "Analyze how transportation infrastructure decisions affect urban development and social equity."
+
+### Creative Prompts
+1. "Write a short story about a scientist who discovers a way to communicate with plants."
+2. "Create a dialogue between two AI systems discussing what it means to be conscious."
+3. "Compose a poem about the relationship between technology and nature."
+4. "Design a fictional sustainable city of the future and describe its key features."
+5. "Write the opening paragraph of a mystery novel set in a quantum computing lab."
+
+### Code/Technical Prompts
+1. "Write an ES6 Javascript function that implements a basic RAG system using vector embeddings."
+2. "Explain how to set up a Kubernetes cluster for deploying machine learning models."
+3. "Create a SQL query that finds patterns in customer purchase behavior across multiple tables."
+4. "Write pseudocode for an efficient algorithm to detect anomalies in streaming data."
+5. "Describe the architecture for a scalable microservice system for processing large language model requests."
+
+### Instruction-Following Prompts
+1. "Create a step-by-step guide for someone learning to play chess."
+2. "Provide a detailed recipe for sourdough bread, explaining the science behind each step."
+3. "Outline a 30-day fitness plan for someone recovering from a minor injury."
+4. "Create a troubleshooting flowchart for common home WiFi problems."
+5. "Write instructions for setting up a permaculture garden in a small urban space."
+
+## RAG Documents (Suggestions)
+
+1. **Academic Paper**: "Attention Is All You Need" (original transformer paper) - tests technical comprehension
+2. **Historical Document**: "Universal Declaration of Human Rights" - tests understanding of legal/ethical concepts
+3. **Technical Documentation**: TensorFlow or PyTorch documentation excerpt - tests technical application
+4. **Scientific Article**: Recent climate science review from Nature or Science - tests scientific comprehension
+5. **Business Case Study**: Harvard Business Review case on digital transformation - tests business analysis
+
+## Web Search URLs
+
+1. **Technical Resource**: https://huggingface.co/docs/transformers/index - tests ability to extract technical information
+2. **News/Current Events**: https://www.reuters.com/ - tests current event knowledge and summarization
+3. **Research Site**: https://arxiv.org/ (specific AI papers) - tests scientific comprehension
+4. **Data Source**: https://ourworldindata.org/ - tests data interpretation
+5. **Educational Resource**: https://plato.stanford.edu/ (Stanford Encyclopedia of Philosophy) - tests complex concept understanding
+
+## Testing Framework Suggestions
+
+For consistent evaluation:
+
+1. Create a scoring rubric (1-5) for:
+   - Factual accuracy
+   - Reasoning quality
+   - Response coherence
+   - Task completion
+   - Creativity (where applicable)
+
+2. Track performance metrics:
+   - Response time
+   - Token generation speed
+   - Memory usage during inference
+   - CPU/GPU utilization
+
+3. Consider A/B testing different prompting strategies:
+   - With/without system prompts
+   - Different levels of instruction specificity
+   - Chain-of-thought vs. direct prompting
+
+This framework should give you comprehensive data on how your Ollama models perform across different hardware configurations and different types of tasks.

@@ -1,0 +1,168 @@
+macstudio@Macs-Mac-Studio 2024-08-20-quant-tester % bun index.ts
+? Select a model name: phi3 - 3.8B
+? Enter a prompt you want to test: If you take two apples from three apples, how many aplles do you have
+
+phi3:latest round 1:
+You now have two apples. The question essentially asks what remains after taking away one group of items (two out of the total) without implying that those taken are to be added back or considered as separate entities outside this context. Therefore, logically and based on direct interpretation of actions described in the instruction, you simply end up with two apples from your original count due to not specifying any further action like keeping them separately or adding more beyond what'sufficiently implied by taking 'two out of three.'
+Generated in 1.40 seconds
+
+--------
+
+
+phi3:latest round 2:
+You would have two apples. The phrase suggests taking away two of the available three apples leaves you with those two in your possession. However, it's important to note that this question might lead some into counting all objects including ones not physically held or removed from their original place which is a common misunderstanding known as the "transportation problem" fallacy - confusing physical count with conceptual understanding of quantities remaining unchanged after an action has been performed.
+Generated in 1.26 seconds
+
+--------
+
+
+phi3:latest round 3:
+After taking two out of the three apples I had, I would now possess those two apples. The initial count was irrelevant to my current possession; what mattered is that I took two which gives me exactly two in hand at this moment. Hence, logically and functionally speaking without considering any moral implications or intentions for sharing—which might affect personal perceptions of the act but not its outcome—I have taken ownership of those apples, leaving none behind except possibly a memory of their existence where they were before I took them from my original count. So in strict terms and disregarding external factors such as potential obligations or desires to share, if one takes two out of three apples, the result is simply holding onto two apples personally with an implied action leaving only a residual memory within oneself for those initially present but no longer physically held.
+Generated in 2.44 seconds
+
+--------
+
+
+phi3:latest round 4:
+Two. When the instruction says to "take," it's referring to the action of removing them temporarily; hence if someone took both and then returned or decided they wanted only one for some reason, there would still be two in your possession as per this interpretation. But formally according to arithmetic based on common understanding, you are left with just a single apple since 3 - 2 = 1. However, the phrasing of the question seems intentionally misleading and designed towards humor or trickery rather than literal maths comprehension.
+Generated in 1.45 seconds
+
+--------
+
+
+phi3:latest round 5:
+You would have two apples. The phrasing of the question suggests that taking two out physically leaves them in your possession, resulting in having two apples with you. However, this is often interpreted as misdirection because it seems to be asking for how many are left rather than counting what was taken. Therefore: if I take 2 from 3 (which means leaving me with one), the direct answer would typically be "one apple remains", but since we're focusing on possession and not leftovers, you have two apples after taking them out as stated in the question.
+Generated in 1.61 seconds
+
+========
+
+macstudio@Macs-Mac-Studio 2024-08-20-quant-tester % bun index.ts
+? Select a model name: llama3 - 8.0B
+? Enter a prompt you want to test: if you take two apples from three apples how many apples do you have
+
+llama3:8b-instruct-q2_K round 1:
+A clever question!
+
+If I take two apples from three apples, that means I'm taking away two apples from the original three.
+
+So, if I have two apples left from the three apples I started with, then...
+
+I have... ONE APPLE!
+Generated in 1.27 seconds
+
+--------
+
+
+llama3:8b-instruct-q2_K round 2:
+A clever question!
+
+If I take two apples from three apples, that means I'm removing two apples from the original three.
+
+So, if I start with 3 apples and remove 2 apples...
+
+Then, I'm left with... (drumroll please)... 1 apple!
+Generated in 1.44 seconds
+
+--------
+
+
+llama3:8b-instruct-q2_K round 3:
+A classic lateral thinking puzzle!
+
+You're right, this is a trick question. If I take two apples from three apples, that means I've taken two apples and left one apple.
+
+So, after taking those two apples away from the original three apples... I have... 1 apple!
+Generated in 1.47 seconds
+
+--------
+
+
+llama3:8b-instruct-q2_K round 4:
+A classic lateral thinking puzzle!
+
+If I take two apples from three apples, that means I'm taking away two of the three apples.
+
+So, if I take away two apples from the original three apples...
+
+I'm left with... ONE APPLE!
+
+So, in the end, I have one apple.
+Generated in 1.52 seconds
+
+--------
+
+
+llama3:8b-instruct-q2_K round 5:
+A classic lateral thinking puzzle!
+
+If I take two apples from three apples, that means I'm left with...
+
+...one apple!
+
+So, the answer is: 1 apple!
+Generated in 0.91 seconds
+
+========
+
+
+llama3:8b-instruct-q4_0 round 1:
+A classic lateral thinking puzzle!
+
+If I take two apples from three apples, that means I've taken 2/3 of the original amount.
+
+So, if I start with 3 apples and take away 2, I'm left with... 1 apple!
+
+Answer: 1 apple.
+Generated in 1.18 seconds
+
+--------
+
+
+llama3:8b-instruct-q4_0 round 2:
+A classic lateral thinking puzzle!
+
+If I take two apples from three apples, that means I'm left with...
+
+One apple!
+Generated in 0.50 seconds
+
+--------
+
+
+llama3:8b-instruct-q4_0 round 3:
+A classic lateral thinking puzzle!
+
+If you take 2 apples from 3 apples, that means you're left with... (drumroll please)... 1 apple!
+
+You started with 3 apples and took 2 away, so you have 1 apple remaining.
+Generated in 1.08 seconds
+
+--------
+
+
+llama3:8b-instruct-q4_0 round 4:
+A classic lateral thinking puzzle!
+
+If I take two apples from three apples, that means I'm taking 2/3 of the original amount.
+
+So, after taking those two apples, I have... (drumroll please)... ONE apple left!
+
+I've taken 2 apples and there were originally 3, so now I have just 1 apple remaining.
+Generated in 1.45 seconds
+
+--------
+
+
+llama3:8b-instruct-q4_0 round 5:
+A classic lateral thinking puzzle!
+
+If you take two apples from three apples, that means you've taken two apples away from the original three.
+
+So, if you start with 3 apples and take 2 away, you're left with...
+
+1 apple!
+Generated in 1.01 seconds
+
+========
+
+macstudio@Macs-Mac-Studio 2024-08-20-quant-tester % 

@@ -1,0 +1,26 @@
+Set Up ai mini
+
+1. Install Chrome
+2. Install Ollama then pull llama3
+3. Install nvs set node version. test node, npm --version
+
+https://github.com/jasongin/nvs/releases/download/v1.6.0/nvs-1.6.0.msi
+
+ nvs menu
+    nvs add 20
+    nvs use 20
+    nvs link
+
+
+
+
+4. Install pm2
+
+npm install -g pm2
+2. Check
+ps -aux | egrep 'pm2'
+3. Configure pm2 to start automatically on system startup
+pm2 startup systemd
+
+
+4. Install set-repos

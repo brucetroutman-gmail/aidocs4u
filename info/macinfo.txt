@@ -1,0 +1,69 @@
+import { execSync } from 'child_process';
+
+// Function to execute shell commands and return cleaned output
+function runCommand(command) {
+  try {
+    return execSync(command, { encoding: 'utf8' }).trim();
+  } catch (error) {
+    return 'Unknown';
+  }
+}
+
+// Extract system information
+function getMacInfo() {
+  // Get Mac model
+  const modelInfo = runCommand('system_profiler SPHardwareDataType | grep "Model Name"');
+  const THE_PC_MODEL = modelInfo.replace(/.*Model Name: (.*)/, '$1') || 'Unknown';
+
+  // Get OS version
+  const osName = runCommand('sw_vers -productName');
+  const osVersion = runCommand('sw_vers -productVersion');
+  const THE_OS = `${osName} v${osVersion}` || 'Unknown';
+
+  // Get CPU
+  const cpuInfo = runCommand('system_profiler SPHardwareDataType | grep "Processor Name"');
+  const THE_CPU = cpuInfo.replace(/.*Processor Name: (.*)/, '$1') || 'Unknown';
+
+  // Get GPU
+  const gpuInfo = runCommand('system_profiler SPDisplaysDataType | grep "Chipset Model" | head -n 1');
+  const THE_GPU = gpuInfo.replace(/.*Chipset Model: (.*)/, '$1') || 'Unknown';
+
+  // Get RAM
+  const ramInfo = runCommand('system_profiler SPHardwareDataType | grep "Memory"');
+  const THE_RAM = ramInfo.replace(/.*Memory: (.*)/, '$1') || 'Unknown';
+
+  // Get Serial Number
+  const serialInfo = runCommand('system_profiler SPHardwareDataType | grep "Serial Number"');
+  const THE_SERIAL = serialInfo.replace(/.*Serial Number.*: (.*)/, '$1') || 'Unknown';
+
+  // Get Hardware UUID
+  const uuidInfo = runCommand('ioreg -rd1 -c IOPlatformExpertDevice | grep IOPlatformUUID');
+  const THE_UUID = uuidInfo.replace(/.*"IOPlatformUUID" = "(.*)"/, '$1') || 'Unknown';
+
+  // Get PC_CODE (first 2 letters + last 3 letters of THE_SERIAL)
+  const THE_PC_CODE = THE_SERIAL !== 'Unknown' ? `${THE_SERIAL.slice(0, 2)}${THE_SERIAL.slice(-3)}` : 'Unknown';
+
+  return {
+    THE_PC_MODEL,
+    THE_OS,
+    THE_CPU,
+    THE_GPU,
+    THE_RAM,
+    THE_SERIAL,
+    THE_UUID,
+    THE_PC_CODE
+  };
+}
+
+// Output the information in the requested format
+const info = getMacInfo();
+console.log(`THE_PC_MODEL="${info.THE_PC_MODEL}"`);
+console.log(`THE_OS="${info.THE_OS}"`);
+console.log(`THE_CPU="${info.THE_CPU}"`);
+console.log(`THE_GPU="${info.THE_GPU}"`);
+console.log(`THE_RAM="${info.THE_RAM}"`);
+console.log(`THE_SERIAL="${info.THE_SERIAL}"`);
+console.log(`THE_UUID="${info.THE_UUID}"`);
+console.log(`THE_PC_CODE="${info.THE_PC_CODE}"`);
+
+export default getMacInfo;

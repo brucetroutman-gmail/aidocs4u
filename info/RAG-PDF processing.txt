@@ -1,0 +1,53 @@
+# Best Practices for Handling RAG PDF Documents
+
+When working with PDFs in Retrieval Augmented Generation (RAG) systems, several approaches can optimize your results:
+
+## Document Processing Pipeline
+
+1. **Extract Text Properly**
+   - Use high-quality PDF extraction tools like PyPDF, PDFMiner, or Unstructured.io
+   - Preserve document structure (paragraphs, sections, tables)
+   - Handle multi-column layouts and complex formatting
+
+2. **Chunking Strategies**
+   - Semantic chunking (by section/topic) rather than arbitrary character counts
+   - Experiment with chunk sizes (typically 512-1000 tokens)
+   - Include overlaps between chunks (100-200 tokens) to maintain context
+
+3. **Metadata Enhancement**
+   - Extract and preserve metadata (title, date, authors, section headings)
+   - Include structural context with each chunk (e.g., "From Section 3.2: Results")
+   - Generate summaries for each section to aid retrieval
+
+## Embedding and Retrieval Optimization
+
+1. **Advanced Embedding Models**
+   - Use specialized embedding models for your domain (legal, medical, etc.)
+   - Consider models like text-embedding-ada-002 or newer alternatives
+
+2. **Hybrid Search**
+   - Combine dense vector search with sparse methods (BM25)
+   - Implement re-ranking to improve precision
+
+3. **Document Pre-processing**
+   - Remove headers/footers, page numbers, and irrelevant boilerplate
+   - Handle images and figures with OCR and/or captions
+   - Normalize text formatting and special characters
+
+## Advanced Techniques
+
+1. **Hierarchical Retrieval**
+   - Create document-level and chunk-level embeddings
+   - First retrieve relevant documents, then relevant chunks within them
+
+2. **PDF-Specific Considerations**
+   - Handle tables with specialized extractors
+   - Extract and process images with OCR and vision models
+   - Preserve mathematical formulas with specialized parsers
+
+3. **Quality Assurance**
+   - Implement validation steps to verify extraction quality
+   - Use citation verification to ensure accurate source attribution
+   - Consider human-in-the-loop validation for critical applications
+
+Implementing these approaches will significantly improve the effectiveness of your RAG system when working with PDF documents.
